@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "amplify-sample",
+  "description": "sample project using amplify",
+  "version": "<replaced_by_webpack>",
+  "content_security_policy": "object-src 'self'; script-src 'self'",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Amplify Login"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "run_at": "document_idle",
+      "js": ["contentScript.bundle.js"]
+    }
+  ],
+  "permissions": ["tabs", "activeTab", "storage", "identity"],
+  "web_accessible_resources": [
+    "ditto.png"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
+}

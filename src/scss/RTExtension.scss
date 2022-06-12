@@ -1,0 +1,14 @@
+@import '../css/RTExtension.css';
+
+.rtHover {
+  @import 'bootstrap';
+
+  .popover {
+    max-width: 100%;
+    z-index: 999999;
+  }
+
+  .fade {
+    opacity: 1;
+  }
+}
