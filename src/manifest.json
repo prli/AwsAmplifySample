@@ -9,7 +9,7 @@
     "default_title": "Amplify Login"
   },
   "background": {
-    "page": "background.html"
+    "service_worker": "background.bundle.js"
   },
   "content_scripts": [
     {
